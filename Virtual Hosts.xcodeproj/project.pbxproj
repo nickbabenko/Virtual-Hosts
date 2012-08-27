@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D201F3615EBAE3E00B8B001 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D201F3515EBAE3E00B8B001 /* QuartzCore.framework */; };
+		4D20D6C115EA997600D08BCD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D20D6C015EA997600D08BCD /* Cocoa.framework */; };
+		4D20D6CB15EA997600D08BCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D20D6C915EA997600D08BCD /* InfoPlist.strings */; };
+		4D20D6D815EA99B800D08BCD /* VirtualHostsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D20D6D715EA99B800D08BCD /* VirtualHostsPlugin.m */; };
+		4D20D71315EA9E0600D08BCD /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D20D71215EA9E0600D08BCD /* libicucore.dylib */; };
+		4D3F7DB615EBB60500A5B0DB /* Globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3F7DB515EBB60500A5B0DB /* Globe.png */; };
+		4D3F7DB915EBB7EA00A5B0DB /* Globe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3F7DB815EBB7EA00A5B0DB /* Globe@2x.png */; };
+		4D8F917615EBF38E00E4F0C2 /* JDArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F916515EBF38E00E4F0C2 /* JDArrayController.m */; };
+		4D8F917715EBF38E00E4F0C2 /* JDEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F916715EBF38E00E4F0C2 /* JDEmptyView.m */; };
+		4D8F917815EBF38E00E4F0C2 /* JDFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F916915EBF38E00E4F0C2 /* JDFormView.m */; };
+		4D8F917915EBF38E00E4F0C2 /* JDHyperlinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F916B15EBF38E00E4F0C2 /* JDHyperlinkButton.m */; };
+		4D8F917A15EBF38E00E4F0C2 /* JDLinenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F916D15EBF38E00E4F0C2 /* JDLinenView.m */; };
+		4D8F917B15EBF38E00E4F0C2 /* JDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F916F15EBF38E00E4F0C2 /* JDTableView.m */; };
+		4D8F917C15EBF38E00E4F0C2 /* OnOffValueTransormer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F917115EBF38E00E4F0C2 /* OnOffValueTransormer.m */; };
+		4D8F917D15EBF38E00E4F0C2 /* SourceListCountToBoolean.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F917315EBF38E00E4F0C2 /* SourceListCountToBoolean.m */; };
+		4D8F917E15EBF38E00E4F0C2 /* VirtualHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F917515EBF38E00E4F0C2 /* VirtualHost.m */; };
+		4D8F918015EBF39400E4F0C2 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D8F917F15EBF39400E4F0C2 /* Window.xib */; };
+		4D8F918415EBF39F00E4F0C2 /* Linen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8F918115EBF39F00E4F0C2 /* Linen.png */; };
+		4D8F918515EBF39F00E4F0C2 /* WebTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8F918215EBF39F00E4F0C2 /* WebTemplate.png */; };
+		4D8F918615EBF39F00E4F0C2 /* WebTemplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8F918315EBF39F00E4F0C2 /* WebTemplate@2x.png */; };
+		4D8F918A15EBF3C800E4F0C2 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F918915EBF3C800E4F0C2 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4D201F3515EBAE3E00B8B001 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4D20D6BD15EA997600D08BCD /* Virtual Hosts.codaplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtual Hosts.codaplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D20D6C015EA997600D08BCD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4D20D6C315EA997600D08BCD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4D20D6C415EA997600D08BCD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4D20D6C515EA997600D08BCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4D20D6C815EA997600D08BCD /* Virtual Hosts-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Virtual Hosts-Info.plist"; sourceTree = "<group>"; };
+		4D20D6CA15EA997600D08BCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4D20D6CC15EA997600D08BCD /* Virtual Hosts-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Virtual Hosts-Prefix.pch"; sourceTree = "<group>"; };
+		4D20D6D615EA99B800D08BCD /* VirtualHostsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualHostsPlugin.h; sourceTree = "<group>"; };
+		4D20D6D715EA99B800D08BCD /* VirtualHostsPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualHostsPlugin.m; sourceTree = "<group>"; };
+		4D20D71215EA9E0600D08BCD /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4D3F7DB515EBB60500A5B0DB /* Globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Globe.png; sourceTree = "<group>"; };
+		4D3F7DB815EBB7EA00A5B0DB /* Globe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Globe@2x.png"; sourceTree = "<group>"; };
+		4D8F916415EBF38E00E4F0C2 /* JDArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDArrayController.h; sourceTree = "<group>"; };
+		4D8F916515EBF38E00E4F0C2 /* JDArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDArrayController.m; sourceTree = "<group>"; };
+		4D8F916615EBF38E00E4F0C2 /* JDEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDEmptyView.h; sourceTree = "<group>"; };
+		4D8F916715EBF38E00E4F0C2 /* JDEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDEmptyView.m; sourceTree = "<group>"; };
+		4D8F916815EBF38E00E4F0C2 /* JDFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFormView.h; sourceTree = "<group>"; };
+		4D8F916915EBF38E00E4F0C2 /* JDFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDFormView.m; sourceTree = "<group>"; };
+		4D8F916A15EBF38E00E4F0C2 /* JDHyperlinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDHyperlinkButton.h; sourceTree = "<group>"; };
+		4D8F916B15EBF38E00E4F0C2 /* JDHyperlinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDHyperlinkButton.m; sourceTree = "<group>"; };
+		4D8F916C15EBF38E00E4F0C2 /* JDLinenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDLinenView.h; sourceTree = "<group>"; };
+		4D8F916D15EBF38E00E4F0C2 /* JDLinenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDLinenView.m; sourceTree = "<group>"; };
+		4D8F916E15EBF38E00E4F0C2 /* JDTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDTableView.h; sourceTree = "<group>"; };
+		4D8F916F15EBF38E00E4F0C2 /* JDTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDTableView.m; sourceTree = "<group>"; };
+		4D8F917015EBF38E00E4F0C2 /* OnOffValueTransormer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffValueTransormer.h; sourceTree = "<group>"; };
+		4D8F917115EBF38E00E4F0C2 /* OnOffValueTransormer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffValueTransormer.m; sourceTree = "<group>"; };
+		4D8F917215EBF38E00E4F0C2 /* SourceListCountToBoolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceListCountToBoolean.h; sourceTree = "<group>"; };
+		4D8F917315EBF38E00E4F0C2 /* SourceListCountToBoolean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceListCountToBoolean.m; sourceTree = "<group>"; };
+		4D8F917415EBF38E00E4F0C2 /* VirtualHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualHost.h; sourceTree = "<group>"; };
+		4D8F917515EBF38E00E4F0C2 /* VirtualHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualHost.m; sourceTree = "<group>"; };
+		4D8F917F15EBF39400E4F0C2 /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
+		4D8F918115EBF39F00E4F0C2 /* Linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Linen.png; sourceTree = "<group>"; };
+		4D8F918215EBF39F00E4F0C2 /* WebTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebTemplate.png; sourceTree = "<group>"; };
+		4D8F918315EBF39F00E4F0C2 /* WebTemplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WebTemplate@2x.png"; sourceTree = "<group>"; };
+		4D8F918715EBF3BC00E4F0C2 /* CodaPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodaPlugInsController.h; path = ../../CodaPlugInsController.h; sourceTree = "<group>"; };
+		4D8F918815EBF3C800E4F0C2 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegexKitLite.h; path = "../../3rd-party Libraries/RegexKitLite-4.0/RegexKitLite.h"; sourceTree = "<group>"; };
+		4D8F918915EBF3C800E4F0C2 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegexKitLite.m; path = "../../3rd-party Libraries/RegexKitLite-4.0/RegexKitLite.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D20D6BA15EA997600D08BCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D201F3615EBAE3E00B8B001 /* QuartzCore.framework in Frameworks */,
+				4D20D71315EA9E0600D08BCD /* libicucore.dylib in Frameworks */,
+				4D20D6C115EA997600D08BCD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D20D6B215EA997600D08BCD = {
+			isa = PBXGroup;
+			children = (
+				4D20D6C615EA997600D08BCD /* Virtual Hosts */,
+				4D20D6BF15EA997600D08BCD /* Frameworks */,
+				4D20D6BE15EA997600D08BCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D20D6BE15EA997600D08BCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D20D6BD15EA997600D08BCD /* Virtual Hosts.codaplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D20D6BF15EA997600D08BCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D20D71215EA9E0600D08BCD /* libicucore.dylib */,
+				4D201F3515EBAE3E00B8B001 /* QuartzCore.framework */,
+				4D20D6C015EA997600D08BCD /* Cocoa.framework */,
+				4D20D6C215EA997600D08BCD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D20D6C215EA997600D08BCD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D20D6C315EA997600D08BCD /* AppKit.framework */,
+				4D20D6C415EA997600D08BCD /* CoreData.framework */,
+				4D20D6C515EA997600D08BCD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4D20D6C615EA997600D08BCD /* Virtual Hosts */ = {
+			isa = PBXGroup;
+			children = (
+				4D20D6DA15EA99CF00D08BCD /* Classes */,
+				4D20D70115EA9B5700D08BCD /* Resources */,
+				4D20D6C715EA997600D08BCD /* Supporting Files */,
+			);
+			path = "Virtual Hosts";
+			sourceTree = "<group>";
+		};
+		4D20D6C715EA997600D08BCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D20D6C815EA997600D08BCD /* Virtual Hosts-Info.plist */,
+				4D20D6C915EA997600D08BCD /* InfoPlist.strings */,
+				4D20D6CC15EA997600D08BCD /* Virtual Hosts-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4D20D6DA15EA99CF00D08BCD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4D8F918715EBF3BC00E4F0C2 /* CodaPlugInsController.h */,
+				4D8F916415EBF38E00E4F0C2 /* JDArrayController.h */,
+				4D8F916515EBF38E00E4F0C2 /* JDArrayController.m */,
+				4D8F916615EBF38E00E4F0C2 /* JDEmptyView.h */,
+				4D8F916715EBF38E00E4F0C2 /* JDEmptyView.m */,
+				4D8F916815EBF38E00E4F0C2 /* JDFormView.h */,
+				4D8F916915EBF38E00E4F0C2 /* JDFormView.m */,
+				4D8F916A15EBF38E00E4F0C2 /* JDHyperlinkButton.h */,
+				4D8F916B15EBF38E00E4F0C2 /* JDHyperlinkButton.m */,
+				4D8F916C15EBF38E00E4F0C2 /* JDLinenView.h */,
+				4D8F916D15EBF38E00E4F0C2 /* JDLinenView.m */,
+				4D8F916E15EBF38E00E4F0C2 /* JDTableView.h */,
+				4D8F916F15EBF38E00E4F0C2 /* JDTableView.m */,
+				4D8F917015EBF38E00E4F0C2 /* OnOffValueTransormer.h */,
+				4D8F917115EBF38E00E4F0C2 /* OnOffValueTransormer.m */,
+				4D8F918815EBF3C800E4F0C2 /* RegexKitLite.h */,
+				4D8F918915EBF3C800E4F0C2 /* RegexKitLite.m */,
+				4D8F917215EBF38E00E4F0C2 /* SourceListCountToBoolean.h */,
+				4D8F917315EBF38E00E4F0C2 /* SourceListCountToBoolean.m */,
+				4D8F917415EBF38E00E4F0C2 /* VirtualHost.h */,
+				4D8F917515EBF38E00E4F0C2 /* VirtualHost.m */,
+				4D20D6D615EA99B800D08BCD /* VirtualHostsPlugin.h */,
+				4D20D6D715EA99B800D08BCD /* VirtualHostsPlugin.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		4D20D70115EA9B5700D08BCD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D8F917F15EBF39400E4F0C2 /* Window.xib */,
+				4D3F7DB515EBB60500A5B0DB /* Globe.png */,
+				4D3F7DB815EBB7EA00A5B0DB /* Globe@2x.png */,
+				4D8F918115EBF39F00E4F0C2 /* Linen.png */,
+				4D8F918215EBF39F00E4F0C2 /* WebTemplate.png */,
+				4D8F918315EBF39F00E4F0C2 /* WebTemplate@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D20D6BC15EA997600D08BCD /* Virtual Hosts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D20D6CF15EA997600D08BCD /* Build configuration list for PBXNativeTarget "Virtual Hosts" */;
+			buildPhases = (
+				4D20D6B915EA997600D08BCD /* Sources */,
+				4D20D6BA15EA997600D08BCD /* Frameworks */,
+				4D20D6BB15EA997600D08BCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Virtual Hosts";
+			productName = "Virtual Hosts";
+			productReference = 4D20D6BD15EA997600D08BCD /* Virtual Hosts.codaplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D20D6B415EA997600D08BCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Joe Dakroub";
+			};
+			buildConfigurationList = 4D20D6B715EA997600D08BCD /* Build configuration list for PBXProject "Virtual Hosts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4D20D6B215EA997600D08BCD;
+			productRefGroup = 4D20D6BE15EA997600D08BCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D20D6BC15EA997600D08BCD /* Virtual Hosts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D20D6BB15EA997600D08BCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D20D6CB15EA997600D08BCD /* InfoPlist.strings in Resources */,
+				4D3F7DB615EBB60500A5B0DB /* Globe.png in Resources */,
+				4D3F7DB915EBB7EA00A5B0DB /* Globe@2x.png in Resources */,
+				4D8F918015EBF39400E4F0C2 /* Window.xib in Resources */,
+				4D8F918415EBF39F00E4F0C2 /* Linen.png in Resources */,
+				4D8F918515EBF39F00E4F0C2 /* WebTemplate.png in Resources */,
+				4D8F918615EBF39F00E4F0C2 /* WebTemplate@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D20D6B915EA997600D08BCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D20D6D815EA99B800D08BCD /* VirtualHostsPlugin.m in Sources */,
+				4D8F917615EBF38E00E4F0C2 /* JDArrayController.m in Sources */,
+				4D8F917715EBF38E00E4F0C2 /* JDEmptyView.m in Sources */,
+				4D8F917815EBF38E00E4F0C2 /* JDFormView.m in Sources */,
+				4D8F917915EBF38E00E4F0C2 /* JDHyperlinkButton.m in Sources */,
+				4D8F917A15EBF38E00E4F0C2 /* JDLinenView.m in Sources */,
+				4D8F917B15EBF38E00E4F0C2 /* JDTableView.m in Sources */,
+				4D8F917C15EBF38E00E4F0C2 /* OnOffValueTransormer.m in Sources */,
+				4D8F917D15EBF38E00E4F0C2 /* SourceListCountToBoolean.m in Sources */,
+				4D8F917E15EBF38E00E4F0C2 /* VirtualHost.m in Sources */,
+				4D8F918A15EBF3C800E4F0C2 /* RegexKitLite.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D20D6C915EA997600D08BCD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D20D6CA15EA997600D08BCD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D20D6CD15EA997600D08BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4D20D6CE15EA997600D08BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4D20D6D015EA997600D08BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Virtual Hosts/Virtual Hosts-Prefix.pch";
+				INFOPLIST_FILE = "Virtual Hosts/Virtual Hosts-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = codaplugin;
+			};
+			name = Debug;
+		};
+		4D20D6D115EA997600D08BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Virtual Hosts/Virtual Hosts-Prefix.pch";
+				INFOPLIST_FILE = "Virtual Hosts/Virtual Hosts-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = codaplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D20D6B715EA997600D08BCD /* Build configuration list for PBXProject "Virtual Hosts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D20D6CD15EA997600D08BCD /* Debug */,
+				4D20D6CE15EA997600D08BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D20D6CF15EA997600D08BCD /* Build configuration list for PBXNativeTarget "Virtual Hosts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D20D6D015EA997600D08BCD /* Debug */,
+				4D20D6D115EA997600D08BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D20D6B415EA997600D08BCD /* Project object */;
+}
