@@ -51,14 +51,14 @@
         if ([directive isEqualTo:@""])
             continue;
         
-        NSMutableArray *directiveParts = [NSMutableArray arrayWithArray:[directive componentsSeparatedByRegex:@"[^\\S]+"]];
+        NSMutableArray *directiveParts = [NSMutableArray arrayWithArray:[directive componentsSeparatedByRegex:@"\"([^\"]*)\\\"|(\\S+)"]];
         
         // Clean up
         if ([[directiveParts objectAtIndex:0] isEqualTo:@""])
             [directiveParts removeObjectAtIndex:0];
         
-        NSString *key = [[directiveParts objectAtIndex:0] stringByMatching:@"[^\\t]+"];
-        NSString *value = [[directiveParts objectAtIndex:1] stringByMatching:@"[^\"]+"];
+        NSString *key = [[directiveParts objectAtIndex:2] stringByMatching:@"[^\\t]+"];
+        NSString *value = [[directiveParts objectAtIndex:4] stringByMatching:@"[^\"]+"];
 
         // Don't add DocumentRoot or ServerName to directives dictionary
         if ([key isEqualTo:@"DocumentRoot"] || [key isEqualTo:@"ServerName"])
@@ -76,7 +76,7 @@
             [directivesDictionary setValue:value forKey:key];
         }
     }
-    
+        
     [vh setDirectives:directivesDictionary];
     [vh setIPAddress:[[hostIPPortArray objectAtIndex:0] isEqualTo:@"*"] ? @"Any" : [hostIPPortArray objectAtIndex:0]];
     [vh setPort:[hostIPPortArray objectAtIndex:1]];
