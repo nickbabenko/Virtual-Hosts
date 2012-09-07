@@ -41,8 +41,8 @@ NSString * const kPluginName = @"Virtual Hosts";
 @implementation VirtualHostsPlugin
 
 
-NSString * const kApacheAccessLog = @"/var/log/apache2/access_log";
-NSString * const kApacheErrorLog = @"/var/log/apache2/error_log";
+NSString * const kApacheAccessLog = @"/opt/local/apache2/log/access_log";
+NSString * const kApacheErrorLog = @"/opt/local/apache2/log/error_log";
 CGFloat const kDataRowHeight = 22.0;
 NSUInteger const kDefaultSelectionIndex = 1;
 NSString * const kEditorName = @"Coda 2";
@@ -51,12 +51,15 @@ CGFloat const kHeaderRowHeight = 17.0;
 NSString * const kHostFile = @"/etc/hosts";
 CGFloat const kLeftViewMinWidth = 150.0;
 CGFloat const kLeftViewMaxWidth = 300.0;
-NSString * const kVirtualHostBackupFile = @"/etc/apache2/extra/httpd-vhosts~backup.conf";
-NSString * const kVirtualHostFile = @"/etc/apache2/extra/httpd-vhosts.conf";
+NSString * const kVirtualHostBackupFile = @"/opt/local/apache2/conf/extra/httpd-vhosts~backup.conf";
+NSString * const kVirtualHostFile = @"/opt/local/apache2/conf/extra/httpd-vhosts.conf";
 NSString * const kVirtualHostPluginIdentifier = @"# Virtual Host Plugin for Coda 2";
 NSString * const kVirtualHostRegex = @"[^#]<VirtualHost [^>]*>([^<]*)</VirtualHost>";
 NSString * const kTempDirectory = @"/tmp";
-NSString * const kWebServerEnabledString = @"-D FOREGROUND";
+NSString * const kWebServerEnabledString = @"/opt/local/apache2/bin/httpd -k start";
+
+NSString * const kApacheBinFile = @"/opt/local/apache2/bin/apachectl";
+NSString * const kApacheProcessFile = @"/opt/local/apache2/bin/httpd";
 
 //2.0 and lower
 - (id)initWithPlugInController:(CodaPlugInsController *)aController bundle:(NSBundle *)aBundle
@@ -279,7 +282,7 @@ dispatch_source_t CreateDispatchTimer(uint64_t interval, uint64_t leeway, dispat
 
 - (void)checkWebServerStatus:(id)sender
 {
-    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:@"do shell script \"ps -ax | grep -i httpd\""];
+    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"do shell script \"ps -ax | grep -i %@\"", kApacheProcessFile]];
     NSAppleEventDescriptor *event = [script executeAndReturnError:nil];
     
     [self setWebServerEnabled:[[event stringValue] rangeOfString:kWebServerEnabledString].length];
@@ -436,7 +439,7 @@ dispatch_source_t CreateDispatchTimer(uint64_t interval, uint64_t leeway, dispat
 
 - (IBAction)toggleWebSharing:(id)sender
 {
-    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"do shell script \"apachectl %@\" with administrator privileges", [sender intValue] == 0 ? @"stop" : @"restart"]];
+    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"do shell script \"%@ %@\" with administrator privileges", kApacheBinFile, [sender intValue] == 0 ? @"stop" : @"restart"]];
     
     [script executeAndReturnError:nil];
 }
@@ -491,13 +494,13 @@ dispatch_source_t CreateDispatchTimer(uint64_t interval, uint64_t leeway, dispat
     [replaced writeToFile:hostTempFile atomically:YES encoding:NSUTF8StringEncoding error:nil];
     
     // Write to permanent location
-    NSString *source = [NSString stringWithFormat:@"do shell script \"cp %@ %@; cp %@ %@; apachectl restart\" with administrator privileges", virtualHostTempFile, kVirtualHostFile, hostTempFile, kHostFile];
+    NSString *source = [NSString stringWithFormat:@"do shell script \"cp %@ %@; cp %@ %@; %@ restart\" with administrator privileges", virtualHostTempFile, kVirtualHostFile, hostTempFile, kHostFile, kApacheBinFile];
     NSAppleScript *script = [[NSAppleScript alloc] initWithSource:source];
     
     [script executeAndReturnError:nil];
     
     NSDictionary *errorInfo = nil;
-    script = [[NSAppleScript alloc] initWithSource:@"do shell script \"apachectl -t\""];
+    script = [[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"do shell script \"%@ -t\"", kApacheBinFile]];
     [script executeAndReturnError:&errorInfo];
     
     if (errorInfo != nil)
