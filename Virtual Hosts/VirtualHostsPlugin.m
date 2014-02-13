@@ -326,7 +326,7 @@ dispatch_source_t CreateDispatchTimer(uint64_t interval, uint64_t leeway, dispat
 
 - (IBAction)flushDNSCache:(id)sender
 {
-    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:@"do shell script \"dscacheutil -flushcache\""];
+     NSAppleScript *script = [[NSAppleScript alloc] initWithSource:@"do shell script \"/usr/bin/killall -HUP mDNSResponder\" with administrator privileges"];
     
     [script executeAndReturnError:nil];
 }
